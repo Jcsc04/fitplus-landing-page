@@ -20,7 +20,20 @@ Modern, sleek, and high-converting landing page for **FitPlus** — an AI-powere
 
 ## 📁 Project Structure
 
-fitplus-landing/ ├── index.html ├── logo.png ├── Brain.jpg ├── icon-ai-plans.png ├── icon-wearables.png ├── icon-nutrition.png ├── icon-trainer.png ├── icon-bioage.png ├── icon-languages.png ├── screen-home-full.jpeg ├── screen-nutrition.jpeg ├── … (other screenshots) └── README.md
+fitplus-landing/ 
+├── index.html 
+├── logo.png 
+├── Brain.jpg 
+├── icon-ai-plans.png 
+├── icon-wearables.png 
+├── icon-nutrition.png 
+├── icon-trainer.png 
+├── icon-bioage.png 
+├── icon-languages.png 
+├── screen-home-full.jpeg 
+├── screen-nutrition.jpeg 
+├── … (other screenshots) 
+└── README.md
 
 ## 🛠️ Technologies Used
 
