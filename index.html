@@ -6,21 +6,19 @@
     <meta name="description" content="FitPlus — AI-Powered Fitness. Join the pre-launch list for the smartest fitness app ever built.">
     <title>FitPlus — AI-Powered Fitness | Coming Soon 2026</title>
     
-    <!-- Fixed Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Share+Tech+Mono&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&amp;display=swap" 
           rel="stylesheet">
 
 <style>
   :root {
     --bg:#0A0A0A;--bg2:#0D0D0D;--bg3:#141414;--card:#1A1A1A;
-    --red:#FF3B30;--red-glow:rgba(255,59,48,0.35);
+    --red:#FF3B30;--red-glow:rgba(255,59,48,0.45);
     --cyan:#00C8FF;--cyan-glow:rgba(0,200,255,0.25);
     --green:#22C55E;--green-glow:rgba(34,197,94,0.25);
     --gold:#FFD700;
     --white:#F0F0F0;--gray:#999;--gray2:#555;
     --glass:rgba(255,255,255,0.04);
     --glass-border:rgba(255,255,255,0.09);
-    --green-border:rgba(34,197,94,0.3);
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -29,6 +27,7 @@
 
   /* NAV */
   nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0.75rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,10,0.92);backdrop-filter:blur(24px);border-bottom:1px solid rgba(255,59,48,0.18);box-shadow:0 4px 30px rgba(0,0,0,0.3);}
+  .nav-logos{display:flex;align-items:center;gap:12px;}
   .nav-logo{height:42px;display:block;transition:transform 0.3s;}
   .nav-logo:hover{transform:scale(1.05);}
   .nav-links{display:flex;gap:2rem;align-items:center;}
@@ -45,43 +44,36 @@
   .glow-cyan{background:var(--cyan);width:420px;height:420px;bottom:12%;left:-8%;}
 
   .coming-soon-badge{
-    display:inline-block;background:rgba(255,59,48,0.15);color:var(--red);
-    font-family:'Share Tech Mono',monospace;font-size:0.9rem;padding:0.5rem 1.8rem;
-    border-radius:9999px;border:1px solid rgba(255,59,48,0.4);letter-spacing:3px;
+    display:inline-block;background:rgba(255,59,48,0.18);color:var(--red);
+    font-family:'Bebas Neue',sans-serif;font-size:clamp(1.3rem,3.5vw,2.1rem);font-weight:700;
+    letter-spacing:6px;padding:0.9rem 2.8rem;border-radius:9999px;border:2px solid rgba(255,59,48,0.5);
+    text-shadow:0 0 25px var(--red-glow);margin-bottom:1.2rem;box-shadow:0 0 40px rgba(255,59,48,0.3);
   }
 
   .hero-content{text-align:center;max-width:860px;position:relative;z-index:2;}
   .hero-logo-img{height:clamp(68px,13vw,110px);display:block;margin:0 auto 1rem;}
-  .hero-tagline{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.2rem,2.8vw,1.9rem);letter-spacing:8px;color:var(--cyan);margin-bottom:1rem;}
-  .hero-desc{color:#eee;font-size:1.4rem;line-height:1.55;max-width:680px;margin:0 auto 2rem;}
+  .hero-tagline{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.4rem,3.2vw,2.2rem);letter-spacing:8px;color:var(--cyan);margin-bottom:1rem;}
+  .hero-desc{color:#eee;font-size:1.45rem;line-height:1.55;max-width:680px;margin:0 auto 2rem;}
 
-  /* Waitlist Form */
-  .waitlist-box{background:var(--glass);border:1px solid var(--glass-border);border-radius:20px;padding:2.2rem;max-width:480px;margin:2rem auto 0;}
+  .waitlist-box{background:var(--glass);border:1px solid var(--glass-border);border-radius:20px;padding:2.5rem;max-width:480px;margin:2rem auto 0;}
   .waitlist-box input{width:100%;padding:1rem 1.4rem;background:#111;border:1px solid var(--glass-border);border-radius:12px;color:white;font-size:1rem;margin-bottom:1rem;}
-  .waitlist-box button{width:100%;padding:1.1rem;background:var(--red);color:white;border:none;border-radius:12px;font-weight:700;font-size:1.1rem;cursor:pointer;transition:0.3s;}
+  .waitlist-box button{width:100%;padding:1.2rem;background:var(--red);color:white;border:none;border-radius:12px;font-weight:700;font-size:1.1rem;cursor:pointer;transition:0.3s;}
   .waitlist-box button:hover{background:#ff5c52;transform:scale(1.03);}
 
-  /* AI SECTION */
+  /* Other sections */
   .ai-highlight{padding:5.5rem 2rem;max-width:1100px;margin:0 auto;position:relative;overflow:hidden;}
   .ai-highlight::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,0.82) 0%,rgba(10,10,10,0.88) 100%),url('https://images.unsplash.com/photo-1605296867304-46d1c8c0e9a6?w=1920&q=80') center/cover no-repeat;z-index:-1;opacity:0.18;}
-  .ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;position:relative;z-index:1;}
+  .ai-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;}
   .ai-brain-img{width:100%;max-width:420px;height:auto;filter:drop-shadow(0 0 80px rgba(0,200,255,0.45));animation:glowPulse 4s ease-in-out infinite;}
 
-  /* Other sections styles */
   .stats-bar{display:flex;justify-content:center;gap:3.5rem;padding:3.2rem 2rem;border-top:1px solid var(--glass-border);border-bottom:1px solid var(--glass-border);max-width:960px;margin:0 auto;background:rgba(10,10,10,0.6);}
   .stat{text-align:center;}
   .stat-num{font-family:'Bebas Neue',sans-serif;font-size:3rem;line-height:1;letter-spacing:-2px;}
   .stat-label{font-family:'Share Tech Mono',monospace;font-size:0.68rem;color:var(--gray2);letter-spacing:2.5px;text-transform:uppercase;margin-top:0.4rem;}
 
-  .testimonials,.showcase,.features,.pricing,.cta{padding:6rem 2rem;max-width:1100px;margin:0 auto;}
   .section-tag{font-family:'Share Tech Mono',monospace;font-size:0.72rem;letter-spacing:3.5px;text-transform:uppercase;margin-bottom:0.8rem;font-weight:600;}
   .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,5.5vw,4rem);text-align:center;margin-bottom:3.8rem;line-height:1.05;}
-  .screen-grid,.features-grid,.price-cards{display:grid;gap:1.8rem;}
-  @media(max-width:980px){.screen-grid{grid-template-columns:repeat(auto-fit,minmax(270px,1fr));}}
-  .screen-card,.feat,.price-card,.testimonial-card{border-radius:28px;overflow:hidden;border:2px solid var(--glass-border);background:var(--bg2);transition:all 0.4s cubic-bezier(0.4,0,0.2,1);}
-  .screen-card:hover,.feat:hover,.price-card:hover{transform:translateY(-12px) scale(1.04);box-shadow:0 25px 70px rgba(0,0,0,0.6);}
-  .feat-icon{width:68px;height:68px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:1.4rem;background:rgba(255,255,255,0.05);padding:8px;}
-  .feat-icon img{width:100%;height:100%;object-fit:contain;}
+
   .reveal{opacity:0;transform:translateY(50px);transition:opacity 0.9s cubic-bezier(0.4,0,0.2,1),transform 0.9s cubic-bezier(0.4,0,0.2,1);}
   .reveal.visible{opacity:1;transform:translateY(0);}
 
@@ -90,11 +82,13 @@
 </head>
 <body>
 
-<!-- NAV -->
+<!-- NAV - Two Logos Added -->
 <nav>
-  <a href="#"><img src="logo.png" alt="FitPlus" class="nav-logo" /></a> 
+  <div class="nav-logos">
+    <a href="#"><img src="logo.png" alt="FitPlus" class="nav-logo" /></a>
+    <a href="#"><img src="logo2.png" alt="FitPlus Secondary Logo" class="nav-logo" /></a>
+  </div>
   <div class="nav-links">
-    <a href="#download">App</a>
     <a href="#features">Features</a>
     <a href="#ai">Results</a>
     <a href="#pricing">Plans</a>
@@ -102,7 +96,7 @@
   </div>
 </nav>
 
-<!-- HERO + COMING SOON + WAITLIST -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-glow glow-red"></div>
@@ -114,7 +108,6 @@
     <div class="hero-tagline">MOVE BETTER · LIVE STRONGER</div>
     <p class="hero-desc">Your body. Your goals. Your AI coach.<br>Personalised workouts, 28-day nutrition plans, wearable sync &amp; Bio Age testing — all adapting in real-time.</p>
 
-    <!-- Pre-Launch Waitlist -->
     <div class="waitlist-box" id="waitlist">
       <h3 style="text-align:center;margin-bottom:1rem;font-family:'Bebas Neue',sans-serif;font-size:1.9rem;">Be Among The First</h3>
       <p style="text-align:center;color:#bbb;margin-bottom:1.5rem;">Join the pre-launch list and get early access + exclusive benefits.</p>
@@ -125,7 +118,7 @@
   </div>
 </section>
 
-<!-- AI SECTION (right after hero) -->
+<!-- AI SECTION -->
 <section class="ai-highlight reveal" id="ai">
   <div class="ai-grid">
     <div class="ai-visual">
@@ -160,115 +153,22 @@
   <div class="stat"><div class="stat-num" style="color:var(--gold)">⚡ AI Pro</div><div class="stat-label">Real-Time Adaptation</div></div>
 </div>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials reveal" id="testimonials">
-  <div class="section-tag tag-green" style="text-align:center;">REAL RESULTS • REAL PEOPLE</div>
-  <div class="section-title">“I’ve never stuck to a plan like this before”</div>
-  <div class="testimonial-grid">
-    <div class="testimonial-card">
-      <p class="testimonial-text">“The AI literally rebuilt my entire programme around my old shoulder injury. Lost 9kg of fat and hit a new deadlift PR in 7 weeks. This isn’t just an app — it’s my coach 24/7.”</p>
-      <div class="testimonial-author"><div class="avatar">🏋️</div><div class="info"><strong>Sarah Chen</strong><small>CrossFit Coach • London</small></div></div>
-    </div>
-    <div class="testimonial-card">
-      <p class="testimonial-text">“Bio Age test showed I was 12 years older than my real age. 4 weeks later I’m down to 3 years younger. The nutrition plans are insane — I actually enjoy eating healthy now.”</p>
-      <div class="testimonial-author"><div class="avatar">🏃</div><div class="info"><strong>Marcus Okoro</strong><small>Marathon Runner • Lagos</small></div></div>
-    </div>
-    <div class="testimonial-card">
-      <p class="testimonial-text">“As a trainer with 40 clients, the Pro dashboard is a game-changer. My clients stay consistent because the app does the thinking for them. Best investment I’ve made.”</p>
-      <div class="testimonial-author"><div class="avatar">👨‍🏫</div><div class="info"><strong>Emma Laurent</strong><small>Certified Trainer • Paris</small></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- SCREENSHOTS -->
-<section class="showcase reveal" id="screens">
-  <div class="section-tag tag-cyan">INSIDE THE APP</div>
-  <div class="section-title">YOUR FITNESS, <span class="text-cyan">REIMAGINED</span></div>
-  <div class="screen-grid">
-    <!-- Top row -->
-    <div class="screen-card border-red"><img src="screen-home-full.jpeg" alt="Home Dashboard" /><div class="screen-label"><h4 class="text-red">Home Dashboard</h4><p>Instant overview • Trainer &amp; Member modes</p></div></div>
-    <div class="screen-card border-green"><img src="screen-nutrition.jpeg" alt="Nutrition Hub" /><div class="screen-label"><h4 class="text-green">Nutrition Hub</h4><p>Macro tracking + grocery lists</p></div></div>
-    <div class="screen-card border-cyan"><img src="screen-bioage2.jpeg" alt="Bio Age Test" /><div class="screen-label"><h4 class="text-cyan">Bio Age Test</h4><p>3-minute science-backed fitness age</p></div></div>
-    <!-- Bottom row -->
-    <div class="screen-card border-cyan bottom"><img src="screen-workout-plan.jpeg" alt="AI Workout Plan" /><div class="screen-label"><h4>AI Workout Plan</h4><p>Periodised &amp; adaptive training</p></div></div>
-    <div class="screen-card border-green bottom"><img src="screen-nutrition-plan.jpeg" alt="AI Nutrition Plan" /><div class="screen-label"><h4>AI Nutrition Plan</h4><p>28 days of personalised meals</p></div></div>
-    <div class="screen-card border-cyan bottom"><img src="screen-wearables.jpeg" alt="Wearables Hub" /><div class="screen-label"><h4>Wearables Hub</h4><p>Apple Watch, Garmin, WHOOP &amp; more</p></div></div>
-    <div class="screen-card border-red"><img src="screen-trainer.jpeg" alt="Trainer Dashboard" /><div class="screen-label"><h4 class="text-red">Trainer Dashboard</h4><p>Real-time client management</p></div></div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section class="features reveal" id="features">
-  <div class="section-tag tag-green" style="text-align:center;">WHY ATHLETES CHOOSE FITPLUS</div>
-  <div class="section-title" style="text-align:center;">EVERYTHING YOU NEED TO <span class="text-green">LEVEL UP</span></div>
-  <div class="features-grid">
-    <div class="feat"><div class="feat-icon fi-red"><img src="icon-ai-plans.png" alt="AI-Powered Plans"></div><h3>AI-POWERED PLANS</h3><p>Workouts &amp; nutrition generated live for your exact body, goals, schedule and recovery data.</p></div>
-    <div class="feat"><div class="feat-icon fi-cyan"><img src="icon-wearables.png" alt="Seamless Wearables"></div><h3>SEAMLESS WEARABLES</h3><p>Connect Apple Watch, Garmin, WHOOP, Fitbit, Polar &amp; more in one powerful dashboard.</p></div>
-    <div class="feat"><div class="feat-icon fi-green"><img src="icon-nutrition.png" alt="28-Day Nutrition"></div><h3>28-DAY NUTRITION</h3><p>Hyper-personalised meal plans with macro cycling, grocery lists, and supplement recommendations.</p></div>
-    <div class="feat"><div class="feat-icon fi-red"><img src="icon-trainer.png" alt="Trainer Mode"></div><h3>TRAINER MODE</h3><p>Professional dashboard for trainers to manage clients and build custom programmes.</p></div>
-    <div class="feat"><div class="feat-icon fi-cyan"><img src="icon-bioage.png" alt="Bio Age Test"></div><h3>BIO AGE TEST</h3><p>Instant 3-minute science-backed assessment of your biological fitness age.</p></div>
-    <div class="feat"><div class="feat-icon fi-gold"><img src="icon-languages.png" alt="11 Languages + Multi-Currency"></div><h3>11 LANGUAGES + MULTI-CURRENCY</h3><p>Train anywhere on Earth. AI content generated in your native language.</p></div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing reveal" id="pricing">
-  <div class="section-tag tag-red">START FREE • UPGRADE LATER</div>
-  <div class="section-title">CHOOSE YOUR <span class="text-red">POWER LEVEL</span></div>
-  <div class="price-cards">
-    <div class="price-card"><div class="price-tier text-green">Starter</div><div class="price-amount text-green">£0</div><div class="price-period">Forever free • 30-day trial of Pro features</div><ul class="price-features"><li>Basic workout library</li><li>Bio Age test</li><li>Progress tracker</li><li>Community access</li></ul></div>
-    <div class="price-card popular"><div class="price-badge">MOST POPULAR</div><div class="price-tier text-cyan">Pro</div><div class="price-amount text-cyan">£5.99</div><div class="price-period">per month • billed yearly (£4.99/mo)</div><ul class="price-features"><li>Unlimited AI workouts &amp; nutrition</li><li>Full wearable integration + HRV insights</li><li>Daily macro cycling &amp; meal plans</li><li>Real-time Bio Age tracking</li><li>Priority AI coaching</li></ul></div>
-    <div class="price-card"><div class="price-tier text-red">Trainer Pro</div><div class="price-amount text-red">Free</div><div class="price-period">to start • £19/mo for unlimited clients</div><ul class="price-features"><li>Full client management dashboard</li><li>Custom AI programme builder</li><li>Live progress monitoring</li><li>Client messaging &amp; check-ins</li></ul></div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta reveal" id="download">
-  <div class="cta-bg"></div>
-  <div class="cta-inner">
-    <div class="section-tag tag-red">YOUR TRANSFORMATION STARTS NOW</div>
-    <h2>READY TO BECOME<br>THE STRONGEST VERSION OF <span class="text-red">YOU?</span></h2>
-    <p>Download FitPlus today and start training smarter with AI that adapts to you.</p>
-    <div class="cta-stores">
-      <a href="https://apps.apple.com" class="store-btn btn-apple" target="_blank" rel="noopener">App Store</a>
-      <a href="https://play.google.com" class="store-btn btn-google" target="_blank" rel="noopener">Google Play</a>
-    </div>
-    <div class="cta-free">30 days completely free • No credit card • Cancel anytime</div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="foot-links">
-    <a href="#">Privacy</a>
-    <a href="#">Terms</a>
-    <a href="#">Support</a>
-    <a href="https://fitforall-brown.vercel.app" target="_blank">Try Web Version</a>
-  </div>
-  <div class="copy">&copy; 2026 FitPlus. All rights reserved. • Built for those who refuse to stay average.</div>
-</footer>
-
 <script>
   function joinWaitlist() {
     const email = document.getElementById('emailInput').value.trim();
     if (email) {
-      alert("🎉 Thank you! You've been added to the FitPlus Pre-Launch List.\nWe'll notify you the moment we launch.");
+      alert("🎉 Thank you! You've been added to the FitPlus Pre-Launch List.\nWe'll notify you when we launch.");
       document.getElementById('emailInput').value = '';
     } else {
       alert("Please enter a valid email address.");
     }
   }
 
-  // Reveal animations
   const reveals = document.querySelectorAll('.reveal');
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.15 });
   reveals.forEach(el => obs.observe(el));
-
-  window.addEventListener('scroll', () => {
-    document.querySelector('nav').style.background = window.scrollY > 80 ? 'rgba(10,10,10,0.98)' : 'rgba(10,10,10,0.92)';
-  });
 </script>
 
 </body>
